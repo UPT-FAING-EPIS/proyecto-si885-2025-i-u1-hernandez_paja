@@ -10,19 +10,20 @@
 
 **Escuela Profesional de Ingeniería de Sistemas**
 
-**Proyecto *{Nombre de Proyecto}***
+**Proyecto *Análisis del Uso de Herramientas Tecnológicas en los proyectos de Estudiantes Sistemas UPT***
 
-Curso: *{Nombre de Asignatura}*
+Curso: *Inteligencia de Negocios*
 
-Docente: *{Nombre de Docente}*
+Docente: *Mag. Patrick Cuadros Quiroga*
 
 Integrantes:
 
-***{Apellidos y nombres del estudiante (código universitario)}***
+***Hernandez Cruz, Angel Gadiel (2021070017)***<br>
+***Paja de la Cruz, Piero Alexander (2020067576)***
 
 **Tacna – Perú**
 
-***{Año}***
+***2025***
 
 **  
 **
@@ -32,7 +33,7 @@ Integrantes:
 |CONTROL DE VERSIONES||||||
 | :-: | :- | :- | :- | :- | :- |
 |Versión|Hecha por|Revisada por|Aprobada por|Fecha|Motivo|
-|1\.0|MPV|ELV|ARV|10/10/2020|Versión Original|
+|1\.0|AHC,PPC|PCQ|ARV|18/03/2025|Versión Original|
 
 
 
@@ -45,7 +46,7 @@ Integrantes:
 
 
 
-**Sistema *{Nombre del Sistema}***
+**Sistema *Análisis del Uso de Herramientas Tecnológicas en los proyectos de Estudiantes Sistemas UPT***
 
 **Documento de Visión**
 
@@ -57,7 +58,7 @@ Integrantes:
 |CONTROL DE VERSIONES||||||
 | :-: | :- | :- | :- | :- | :- |
 |Versión|Hecha por|Revisada por|Aprobada por|Fecha|Motivo|
-|1\.0|MPV|ELV|ARV|10/10/2020|Versión Original|
+|1\.0|AHC,PPC|PCQ|ARV|18/03/2025|Versión Original|
 
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
@@ -142,40 +143,67 @@ e) Estandaraes de calidad y seguridad	](#_toc394513800)42
 
 1. <span id="_Toc52661346" class="anchor"></span>**Introducción**
 
-    1.1	Propósito
+    1.1	Propósito<br>
+        El propósito de este documento es analizar el uso de herramientas tecnológicas por parte de los estudiantes de la Escuela de Ingeniería de Sistemas de la Universidad Privada de Tacna (UPT) para determinar su impacto en el aprendizaje y la productividad académica. Este análisis permitirá comprender cómo los estudiantes utilizan diversas tecnologías en sus proyectos y cómo estas influyen en su rendimiento académico.
 
-    1.2	Alcance
+    1.2	Alcance<br>
+        Este análisis se centra en los estudiantes de la Escuela de Ingeniería de Sistemas de la UPT, abarcando el uso de herramientas tecnológicas como lenguajes de programación, frameworks, librerías, bases de datos y herramientas CI/CD. Se evaluará su distribución, popularidad, frecuencia de uso y su relación con el desempeño académico.
 
-    1.3	Definiciones, Siglas y Abreviaturas
+    1.3	Definiciones, Siglas y Abreviaturas<br>
+        - UPT: Universidad Privada de Tacna<br>
+        - CI/CD: Integración Continua y Despliegue Continuo (Continuous Integration/Continuous Deployment)<br>
+        - SQL: Structured Query Language(Lenguaje de consulta estructurado)<br>
+        - NoSQL: Not Only SQL<br>
 
-    1.4	Referencias
+    1.4	Referencias<br>
+        - Documentos académicos de la Universidad Privada de Tacna<br>
+        - Estudios previos sobre el uso de herramientas tecnológicas en entornos educativos<br>
+        - Manuales y documentación oficial de las herramientas tecnológicas analizadas<br>
 
-    1.5	Visión General
+    1.5	Visión General<br>
+        Este documento está estructurado en secciones que describen la problemática, el posicionamiento del análisis, la descripción de los interesados y usuarios, la vista general del producto, las características del análisis, restricciones, calidad, precedencia y otros requerimientos relacionados. Finalmente, se presentan las conclusiones y recomendaciones basadas en los hallazgos del análisis.
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
 2. <span id="_Toc52661347" class="anchor"></span>**Posicionamiento**
 
-    2.1	Oportunidad de negocio
+    2.1	Oportunidad de negocio<br>
+        El análisis del uso de herramientas tecnológicas en el entorno académico permite identificar oportunidades para mejorar la formación de los estudiantes y optimizar el uso de recursos tecnológicos en la educación superior.
 
-    2.2	Definición del problema
+    2.2	Definición del problema<br>
+        Hoy en día, los estudiantes tienen acceso a muchas herramientas tecnológicas que pueden ayudarles en sus estudios. Sin embargo, muchos no saben usarlas de la mejor manera o no tienen suficiente formación para aprovechar todo su potencial. Además, algunos estudiantes no tienen el mismo acceso a estas herramientas, lo que genera diferencias en su rendimiento académico. Por eso, es importante entender cómo usan las herramientas tecnológicas los estudiantes y qué impacto tienen en su aprendizaje.
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
 3. <span id="_Toc52661348" class="anchor"></span>**Vista General del Producto**
 
     3.1	Resumen de los interesados
+    - Estudiantes de la Escuela de Ingeniería de Sistemas de la UPT
+    - Docentes encargados de impartir cursos relacionados con tecnología
+    - Administradores de la universidad responsables de la gestión tecnológica
 
     3.2	Resumen de los usuarios
+    - Estudiantes que utilizan herramientas tecnológicas en sus proyectos académicos
+    - Docentes que evalúan y supervisan el uso de estas herramientas
 
     3.3	Entorno de usuario
-
+    - Entorno académico con acceso a laboratorios informáticos
+    - Plataformas virtuales de aprendizaje
+    - Recursos de software y herramientas de desarrollo proporcionadas por la universidad
+    
     3.4	Perfiles de los interesados
+    - **Estudiantes:** Usan herramientas tecnológicas para sus tareas y proyectos académicos.
+    - **Docentes:** Supervisan, evalúan y brindan orientación sobre el uso adecuado de las tecnologías.
+    - **Administradores:** Facilitan el acceso a las herramientas tecnológicas y gestionan los recursos de la universidad.
 
     3.5	Perfiles de los Usuarios
+    - **Usuarios Principales:** Estudiantes de la Escuela de Ingeniería de Sistemas.
+    - **Usuarios Secundarios:** Docentes y personal administrativo de la UPT.
 
     3.6	Necesidades de los interesados y usuarios
-
+    - Identificar las herramientas más utilizadas en el entorno académico.
+    - Evaluar el impacto del uso de estas herramientas en el rendimiento académico.
+    - Mejorar la formación tecnológica de los estudiantes.
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
 4. <span id="_Toc52661349" class="anchor"></span>**Estudio de
@@ -194,31 +222,42 @@ e) Estandaraes de calidad y seguridad	](#_toc394513800)42
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
 5. <span id="_Toc52661350" class="anchor"></span>**Características del producto**
+- Análisis de la distribución del uso de lenguajes de programación.
+- Evaluación de la popularidad de frameworks.
+- Examen de las librerías más utilizadas.
+- Identificación de bases de datos más empleadas.
+- Investigación de herramientas CI/CD en el ámbito académico.
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
 6. <span id="_Toc52661351" class="anchor"></span>**Restricciones**
-
+El análisis está limitado a estudiantes de la Escuela de Ingeniería de Sistemas de la UPT.
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
 7. <span id="_Toc52661352" class="anchor"></span>**Rangos de Calidad**
-
+- Precisión en la recopilación de datos.
+- Análisis detallado y validado estadísticamente.
+- Presentación clara y concisa de los resultados.
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
 8. <span id="_Toc52661353" class="anchor"></span>**Precedencia y Prioridad**
-
+- Priorizar la evaluación de las herramientas más utilizadas.
+- Enfocar el análisis en las tecnologías con mayor impacto académico.
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
 9. <span id="_Toc52661354" class="anchor"></span>**Otros requerimientos del producto**
-
+- Seguridad en el manejo de los datos recopilados.
+- Accesibilidad del informe final para los interesados.
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
-<span id="_Toc52661355" class="anchor"></span>**CONCLUSIONES**
-
+<span id="_Toc52661355" class="anchor"></span>**CONCLUSIONES**<br>
+El análisis permitirá comprender cómo los estudiantes de la UPT utilizan las herramientas tecnológicas, qué impacto tienen en su rendimiento académico y cuáles son las tecnologías más relevantes en el entorno académico.
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
 <span id="_Toc52661356" class="anchor"></span>**RECOMENDACIONES**
-
+- Fortalecer la formación en herramientas tecnológicas más utilizadas.
+- Implementar programas de capacitación continua.
+- Realizar análisis periódicos para evaluar cambios en el uso de tecnologías.
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
 <span id="_Toc52661357" class="anchor"></span>**BIBLIOGRAFIA**
