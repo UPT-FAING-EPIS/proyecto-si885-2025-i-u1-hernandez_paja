@@ -10,35 +10,37 @@
 
 **Escuela Profesional de Ingeniería de Sistemas**
 
-**Proyecto *{Nombre de Proyecto}***
+**Proyecto *Análisis del Uso de Herramientas Tecnológicas en los proyectos de Estudiantes Sistemas UPT***
 
-Curso: *{Nombre de Asignatura}*
+Curso: *Inteligencia de Negocios*
 
-Docente: *{Nombre de Docente}*
+Docente: *Mag. Patrick Cuadros Quiroga*
 
 Integrantes:
 
-***{Apellidos y nombres del estudiante (código universitario)}***
+***Hernandez Cruz, Angel Gadiel (2021070017)***<br>
+***Paja de la Cruz, Piero Alexander (2020067576)***
 
 **Tacna – Perú**
 
-***{Año}***
+***2025***
 
 **  
 **
 </center>
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
-Sistema *{Nombre del Sistema}*
 
-Informe de Factibilidad
+**Sistema *Análisis del Uso de Herramientas Tecnológicas en los proyectos de Estudiantes Sistemas UPT***
+
+**Informe de Factibilidad**
 
 Versión *{1.0}*
 
 |CONTROL DE VERSIONES||||||
 | :-: | :- | :- | :- | :- | :- |
 |Versión|Hecha por|Revisada por|Aprobada por|Fecha|Motivo|
-|1\.0|MPV|ELV|ARV|10/10/2020|Versión Original|
+|1\.0|AHC,PPC|PCQ|ARV|18/03/2025|Versión Original|
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
@@ -76,24 +78,44 @@ Versión *{1.0}*
 1. <span id="_Toc52661346" class="anchor"></span>**Descripción del Proyecto**
 
     1.1. Nombre del proyecto
+    
+    Análisis del Uso de Herramientas Tecnológicas en los Proyectos de Estudiantes de Sistemas UPT
 
     1.2. Duración del proyecto
 
+    5 meses
+
     1.3. Descripción
 
-        En que consiste el proyecto/importancia del mismo, contexto en que se va desenvolver
+    El proyecto busca analizar cómo los estudiantes de Ingeniería de Sistemas de la UPT utilizan las herramientas tecnológicas en sus proyectos académicos. A través de este análisis, se pretende identificar las herramientas más populares, su impacto en el rendimiento académico y las áreas donde se puede mejorar el uso de estas tecnologías.
 
     1.4. Objetivos
 
         1.4.1 Objetivo general
+
+        Analizar el uso de herramientas tecnológicas en los proyectos académicos de los estudiantes de Ingeniería de Sistemas de la UPT.
+
         1.4.2 Objetivos Específicos
-            Para cada objetivo específico se indicara que se va a lograr
+            
+        - Analizar la distribución del uso de lenguajes de programación entre los estudiantes.
+        
+        - Evaluar la popularidad de frameworks en el entorno académico.
+        
+        - Examinar las librerías más utilizadas por los estudiantes.
+        
+        - Identificar las bases de datos más empleadas.
+        
+        - Investigar el uso de herramientas CI/CD en el entorno académico.
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
 2. <span id="_Toc52661347" class="anchor"></span>**Riesgos**
 
-    Señale los riesgos que pudieran afectar el éxito del proyecto.}*
+    - Inconsistencias en la Información Recopilada: La variabilidad en la forma en que los estudiantes presentan sus proyectos puede generar dificultades en la recolección de datos consistentes. Algunos proyectos pueden no detallar adecuadamente las herramientas tecnológicas utilizadas, lo que dificultaría un análisis preciso.
+    
+    - Diversidad de Formatos de Proyecto: Los proyectos pueden estar en diferentes formatos (documentos, código, presentaciones, etc.), lo que podría complicar el proceso de extracción y análisis de la información. La falta de estandarización puede generar dificultades para comparar datos de manera efectiva.
+
+    - Calidad de los Proyectos: Si los proyectos no están bien estructurados o no se alinean con los criterios esperados (por ejemplo, en términos de uso de herramientas tecnológicas), esto podría afectar la calidad y utilidad de los datos que obtienes para el análisis.
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
@@ -101,11 +123,13 @@ Versión *{1.0}*
 
     3.1. Planteamiento del problema
 
-            Describa antecedentes y situación actual, explicando la problemática y/o necesidad que será resuelta con el proyecto propuesto.
+    Los estudiantes de la Universidad Privada de Tacna enfrentan dificultades para utilizar de manera eficiente las herramientas tecnológicas en sus proyectos académicos. Aunque tienen acceso a diversas herramientas, la falta de formación adecuada limita su capacidad para sacarles el máximo provecho, lo que afecta la calidad de sus proyectos y el aprendizaje.
 
     3.2. Consideraciones de hardware y software
 
-            Hardware y software posibles para la implementación, se analizara lo que existe y es alcanzable, se evaluara que tecnología se puede > utilizar en el proyecto.
+    - Hardware: La universidad dispone de equipos adecuados para el uso de las herramientas tecnológicas en los proyectos académicos. Sin embargo, algunos estudiantes enfrentan dificultades para acceder a estos recursos fuera de las instalaciones universitarias.
+
+    - Software: Los estudiantes utilizan una variedad de lenguajes de programación, frameworks, librerías y bases de datos. Sin embargo, la falta de conocimiento sobre cuál herramienta elegir para cada tipo de proyecto puede reducir la eficiencia. Muchas herramientas utilizadas son de código abierto o gratuitas, lo que facilita su acceso, pero también implica una curva de aprendizaje elevada.
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 

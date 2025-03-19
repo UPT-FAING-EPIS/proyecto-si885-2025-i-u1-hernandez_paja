@@ -51,14 +51,6 @@ Integrantes:
 **Documento de Visión**
 
 **Versión *{1.0}***
-**
-
-<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
-
-|CONTROL DE VERSIONES||||||
-| :-: | :- | :- | :- | :- | :- |
-|Versión|Hecha por|Revisada por|Aprobada por|Fecha|Motivo|
-|1\.0|AHC,PPC|PCQ|ARV|18/03/2025|Versión Original|
 
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
