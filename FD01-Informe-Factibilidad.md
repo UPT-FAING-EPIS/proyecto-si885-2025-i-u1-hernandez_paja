@@ -91,11 +91,11 @@ Versión *{1.0}*
 
     1.4. Objetivos
 
-        1.4.1 Objetivo general
+     - 1.4.1 Objetivo general
 
         Analizar el uso de herramientas tecnológicas en los proyectos académicos de los estudiantes de Ingeniería de Sistemas de la UPT.
 
-        1.4.2 Objetivos Específicos
+    - 1.4.2 Objetivos Específicos
             
         - Analizar la distribución del uso de lenguajes de programación entre los estudiantes.
         
@@ -133,69 +133,73 @@ Versión *{1.0}*
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
-4. <span id="_Toc52661349" class="anchor"></span>**Estudio de
-    Factibilidad**
+4. <span id="_Toc52661349" class="anchor"></span>**Estudio de Factibilidad**
 
     Describir los resultados que esperan alcanzar del estudio de factibilidad, las actividades que se realizaron para preparar la evaluación de factibilidad y por quien fue aprobado.
 
     4.1. <span id="_Toc52661350" class="anchor"></span>Factibilidad Técnica
 
-        El estudio de viabilidad técnica se enfoca en obtener un entendimiento de los recursos tecnológicos disponibles actualmente y su aplicabilidad a las necesidades que se espera tenga el proyecto. En el caso de tecnología informática esto implica una evaluación del hardware y software y como este puede cubrir las necesidades del sistema propuesto.
+    El estudio de viabilidad técnica se enfoca en obtener un entendimiento de los recursos tecnológicos disponibles actualmente y su aplicabilidad a las necesidades que se espera tenga el proyecto. En el caso de tecnología informática esto implica una evaluación del hardware y software y como este puede cubrir las necesidades del sistema propuesto.
 
-        Realizar una evaluación de la tecnología actual existente y la posibilidad de utilizarla en el desarrollo e implantación del sistema.*
-
-        Describir acerca del hardware (equipos, servidor), software (aplicaciones, navegadores, sistemas operativos, dominio, internet, infraestructura de red física, etc.
+    - **Evaluación del Hardware y Software**:
+        - **Hardware**: Se debe revisar el equipo disponible (computadoras, servidores, dispositivos de red, etc.) en las aulas, laboratorios y oficinas. Evaluar si estos recursos son capaces de soportar las herramientas tecnológicas que los estudiantes utilizan en sus proyectos (lenguajes de programación, entornos de desarrollo, bases de datos, etc.).
+        - **Software**: Evaluar si el software actual (sistemas operativos, IDEs, herramientas de colaboración, plataformas de desarrollo) es adecuado para cubrir las necesidades del proyecto. Se debe verificar si los estudiantes tienen acceso a los programas adecuados y si estos cumplen con los estándares de la industria.
+        - **Actualizaciones necesarias**: Determinar si se requieren nuevas adquisiciones de hardware o software, y qué tan factible es esta actualización con los recursos disponibles.
 
     4.2. <span id="_Toc52661351" class="anchor"></span>Factibilidad Económica
 
-        El propósito del estudio de viabilidad económica, es determinar los beneficios económicos del proyecto o sistema propuesto para la organización, en contraposición con los costos.
-        Como se mencionó anteriormente en el estudio de factibilidad técnica wvaluar si la institución (departamento de TI) cuenta con las herramientas necesarias para la implantación del sistema y evaluar si la propuesta requiere o no de una inversión inicial en infraestructura informática.
-        Se plantearán los costos del proyecto.
-        Costeo del Proyecto: Consiste en estimar los costos de los recursos Humanos, materiales o consumibles y/o máquinas) directos para completar las actividades del proyecto}.*
+    El propósito del estudio de viabilidad económica es determinar los beneficios económicos del proyecto o sistema propuesto para la organización, en contraposición con los costos.
 
-        Definir los siguientes costos:
-
-        4.2.1. Costos Generales
-
-                Los costos generales son todos los gastos realizados en accesorios y material de oficina y de uso diario, necesarios para los procesos, tales como, papeles, plumas, cartuchos de impresora, marcadores, computadora etc. Colocar tabla de costos.
-
-        4.2.2. Costos operativos durante el desarrollo 
-        
-                Evaluar costos necesarios para la operatividad de las actividades de la empresa durante el periodo en el que se realizara el proyecto. Los costos de operación pueden ser renta de oficina, agua, luz, teléfono, etc.
-
-        4.2.3. Costos del ambiente
-
-                Evaluar si se cuenta con los requerimientos técnicos para la implantación del software como el dominio, infraestructura de red, acceso a internet, etc.
-
-        4.2.4. Costos de personal
-
-                Aquí se incluyen los gastos generados por el recurso humano que se necesita para el desarrollo del sistema únicamente.
-
-                No se considerará personal para la operación y funcionamiento del sistema.
-
-                Incluir tabla que muestra los gastos correspondientes al personal.
-
-                Indicar organización y roles. Indicar horario de trabajo del personal.
-
-        4.2.5.  Costos totales del desarrollo del sistema
-
-                {Totalizar costos y realizar resumen de costo final del proyecto y la forma de pago.
+    - **Evaluación de Costos**:
+        - **Costos Generales**: Estimar los costos asociados a los recursos materiales y consumibles necesarios (papel, cartuchos de impresora, computadoras adicionales, etc.).
+        - **Costos Operativos**: Evaluar los costos operativos recurrentes durante el desarrollo del proyecto, como el consumo de electricidad, internet, alquiler de equipos adicionales, etc.
+        - **Costos del Ambiente**: Considerar si es necesario mejorar la infraestructura de red o aumentar la capacidad de acceso a internet para garantizar el uso efectivo de las herramientas tecnológicas.
+        - **Costos de Personal**: Calcular los costos relacionados con el personal que participará en el proyecto, incluyendo la capacitación de los estudiantes, los costos de contratación de personal de soporte, o incluso los honorarios de los docentes involucrados.
+        - **Costos Totales del Proyecto**: Realizar una estimación total del costo del proyecto (inicial y operativo) y definir los medios de financiamiento, ya sea a través de fondos internos de la universidad, subsidios, o inversión privada.
 
     4.3. <span id="_Toc52661352" class="anchor"></span>Factibilidad Operativa
 
-        Describir los beneficios del producto y si se tiene la capacidad por parte del cliente para mantener el sistema funcionando y garantizar el buen funcionamiento y su impacto en los usuarios. Lista de interesados.
+    Evaluar si la UPT tiene la capacidad operativa para mantener y gestionar el sistema una vez implementado.
+
+    - **Beneficios Operativos**:
+        - Determinar si la implementación de este proyecto traerá mejoras significativas al rendimiento académico de los estudiantes de Ingeniería de Sistemas. Esto podría incluir mayor eficiencia, mejor colaboración, o acceso a herramientas más avanzadas.
+        - Evaluar si el sistema propuesto facilitará la gestión y supervisión de los proyectos por parte de los docentes, y cómo se integrará con los procesos existentes en la universidad.
+
+    - **Interesados**:
+        - **Estudiantes**: El proyecto debe estar alineado con las necesidades y expectativas de los estudiantes, asegurando que realmente mejore su experiencia educativa.
+        - **Docentes**: Evaluar si los docentes están preparados para gestionar y supervisar el uso de estas herramientas y si están dispuestos a adaptarse al nuevo enfoque.
+        - **Personal de Soporte**: Determinar si el personal de soporte tiene las habilidades necesarias para mantener el sistema funcionando a largo plazo, incluyendo actualizaciones y resolución de problemas.
 
     4.4. <span id="_Toc52661353" class="anchor"></span>Factibilidad Legal
 
-        Determinar si existe conflicto del proyecto con restricciones legales como leyes y regulaciones del país o locales relacionadas con seguridad, protección de datos, conducta de negocio, empleo y adquisiciones.
+    Analizar si el proyecto cumple con las normativas legales, tanto locales como internacionales.
 
-    4.5. <span id="_Toc52661354" class="anchor"></span>Factibilidad Social 
+    - **Cumplimiento Legal**:
+        - Verificar que el uso de herramientas tecnológicas y la recolección de datos de los estudiantes (por ejemplo, información sobre el uso de software) cumpla con las leyes de protección de datos personales y privacidad en Perú.
+        - Evaluar si el uso de software de terceros, especialmente aquellos de código abierto o gratuito, cumple con las licencias y términos legales.
+        - Asegurarse de que el proyecto no infrinja ninguna normativa sobre propiedad intelectual, especialmente si se planea compartir recursos o proyectos entre estudiantes.
 
-        Evaluar influencias y asuntos de índole social y cultural como el clima político, códigos de conducta y ética*
+    4.5. <span id="_Toc52661354" class="anchor"></span>Factibilidad Social
+
+    Evaluar el impacto social y cultural del proyecto dentro de la comunidad universitaria.
+
+    - **Impacto Social**:
+        - **Aceptación y Adopción**: Evaluar cómo los estudiantes y profesores perciben el uso de nuevas herramientas tecnológicas en sus proyectos. Puede haber resistencia por parte de algunos usuarios, por lo que es importante abordar estas preocupaciones.
+        - **Acceso a Herramientas**: Asegurar que todos los estudiantes tengan acceso igualitario a las herramientas necesarias para su éxito académico, independientemente de su situación económica.
+
+    - **Cultura Organizacional**:
+        - La UPT debe tener una cultura abierta a la innovación y adaptación tecnológica. Se debe fomentar la capacitación constante en nuevas herramientas, para garantizar que todos los miembros de la comunidad educativa puedan aprovechar las tecnologías al máximo.
 
     4.6. <span id="_Toc52661355" class="anchor"></span>Factibilidad Ambiental
 
-        Evaluar influencias y asuntos de índole ambiental como el impacto y repercusión en el medio ambiente.
+    Analizar el impacto ambiental del proyecto.
+
+    - **Impacto Ambiental**:
+        - Evaluar si la implementación del proyecto implica un aumento en el uso de energía o recursos materiales. Por ejemplo, si se requiere la instalación de nuevos equipos informáticos, esto podría incrementar el consumo energético de la universidad.
+        - Determinar si el proyecto considera la sostenibilidad, buscando minimizar la huella ecológica, ya sea mediante la reutilización de equipos existentes, la optimización de recursos, o el uso de herramientas tecnológicas con un bajo consumo energético.
+
+    - **Sostenibilidad**:
+        - El proyecto debe considerar estrategias para reducir su impacto ambiental, como el uso de energías renovables, equipos de bajo consumo, o soluciones de software que optimicen el uso de recursos.
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
