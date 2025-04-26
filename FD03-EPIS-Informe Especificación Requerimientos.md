@@ -137,8 +137,8 @@ Los estudiantes de Ingeniería de Sistemas UPT subutilizan herramientas tecnoló
 - Acceso desigual a recursos (FD01, Sección 3.1)
 
 ### 3.2 Objetivos de Negocios
-- Reducir en 30% el tiempo de análisis manual (FD01, 5.1.1)  
-- Identificar las 5 herramientas tecnológicas más críticas para el currículo  
+- Reducir en 30% el tiempo de análisis manual
+- Identificar las herramientas tecnológicas más utilizadas  
 
 ### 3.3 Objetivos de Diseño
 - Sistema automatizado de recolección de datos desde repositorios Git  
@@ -188,11 +188,11 @@ flowchart TD
 | RF03 | Generar reportes de frecuencia de tecnologías | Media |
 
 ### 5.2 Cuadro de Requerimientos No Funcionales
-| ID | Descripción | Prioridad |
-|----|-------------|-----------|
-| RF01 | Extraer metadatos de repositorios Git | Crítica |
-| RF02 | Clasificar lenguajes por proyecto | Alta |
-| RF03 | Generar reportes de frecuencia de tecnologías | Media |
+| ID       | Descripción                                                                 | Prioridad |
+|----------|-----------------------------------------------------------------------------|-----------|
+| RNF01    | El sistema debe analizar más de 500 repositorios GitHub sin fallar          | Alta      |
+| RNF02    | Procesar 1 repositorio cada 30 segundos como máximo                         | Media     |
+| RNF03    | Generar reportes con gráficos claros y datos completos                      | Alta      |
 
 ### 5.4 Reglas de Negocio
 RN001: Solo analizar repositorios con licencia abierta
@@ -248,41 +248,44 @@ flowchart TD
 flowchart TD
     subgraph Sistema
         UC1[Consultar estadísticas]
-        UC2[Generar reporte]
+        UC2[Exportar reportes]
         UC3[Configurar sistema]
         UC4[Autenticarse]
-        UC5[Exportar datos]
     end
-    
+
     Estudiante --> UC1
-    Docente --> UC2
+    Administrador --> UC2
     Administrador --> UC3
     UC1 -.-> UC4
-    UC2 -.-> UC5
-    
+    UC2 -.-> UC4
+    UC3 -.-> UC4
+
     style Sistema fill:#f9f9f9,stroke:#333
     linkStyle 0,1,2 stroke:#0074D9,stroke-width:2px
-    linkStyle 3,4 stroke:#FF851B,stroke-width:2px
+    linkStyle 3,4,5 stroke:#FF851B,stroke-width:2px
 ```
 
 ### 6.2.3 Escenarios de Caso de Uso (Narrativa)
-### Caso UC-01: Generar Reporte de Tecnologías
+**RF01 - Extraer metadatos de repositorios Git**  
+*Flujo:*  
+1. El sistema se conecta a la API de GitHub  
+2. Autentica con token de acceso válido  
+3. Recupera metadatos de repositorios estudiantiles  
+4. Almacena datos en base de datos analítica  
 
-Sistema consulta base de datos
+**RF02 - Clasificar lenguajes por proyecto**  
+*Flujo:*  
+1. Analiza archivos .gitignore y manifestos (package.json, pom.xml)  
+2. Detecta extensiones de archivos (.py, .java, .js)  
+3. Asigna lenguaje principal usando heurísticas  
+4. Genera registro de tecnologías por proyecto  
 
-Genera gráfico comparativo
-
-Exporta a PDF opcionalmente
-
-### Caso UC-02: Actualizar Datos
-
-Sistema verifica nuevos repositorios
-
-Procesa metadatos
-
-Actualiza base de datos
-
-Notifica a administrador
+**RF03 - Generar reportes de frecuencia**  
+*Flujo:*  
+1. Agrupa proyectos por cohorte académica  
+2. Calcula estadísticas de uso por tecnología  
+3. Genera visualizaciones comparativas  
+4. Permite exportar a PDF/CSV  
 
 ### 6.3 Modelo Lógico
 ### 6.3.1 Análisis de Objetos
@@ -311,14 +314,47 @@ flowchart TD
     D --> E[Dashboard: refrescar visualización]
 ```
 ### 6.3.3 Diagrama de Secuencia
+#### RF01 - Extracción de metadatos
 ```mermaid
 sequenceDiagram
-    Sistema->>+Sistema: Solicitar reporte
-    Sistema->>+GitHub: GET /repos
-    GitHub-->>-Sistema: JSON metadata
-    Sistema->>+BaseDatos: Query tecnologías
-    BaseDatos-->>-Sistema: Resultados
-    Sistema->>+Dashboard: Mostrar resultados
+    participant Sistema
+    participant GitHubAPI
+    participant BD
+    
+    Sistema->>GitHubAPI: GET /repos (con token)
+    GitHubAPI-->>Sistema: JSON con metadatos
+    Sistema->>BD: INSERT metadatos_proyecto
+    BD-->>Sistema: Confirmación
+    Sistema->>Sistema: Log de auditoría
+```
+#### RF02 - Clasificación de lenguajes 
+```mermaid
+sequenceDiagram
+    participant Sistema
+    participant Repositorio
+    participant Clasificador
+    
+    Sistema->>Repositorio: Obtener archivos clave
+    Repositorio-->>Sistema: Archivos .gitignore, manifestos
+    Sistema->>Clasificador: Analizar contenido
+    Clasificador-->>Sistema: Lenguaje principal + tecnologías
+    Sistema->>BD: UPDATE proyecto SET tecnologías
+```
+#### RF03 - Generación de reportes
+```mermaid
+sequenceDiagram
+    actor Usuario
+    participant Frontend
+    participant Backend
+    participant BD
+    
+    Usuario->>Frontend: Solicitar reporte (rango fechas)
+    Frontend->>Backend: GET /reportes?fechaInicio=X&fechaFin=Y
+    Backend->>BD: Query agregada tecnologías
+    BD-->>Backend: Dataset estadístico
+    Backend->>Backend: Generar visualizaciones
+    Backend-->>Frontend: JSON con datos + gráficos
+    Frontend->>Usuario: Mostrar dashboard interactivo
 ```
 ### 6.3.4 Diagrama de Clases
 ```mermaid
@@ -367,7 +403,6 @@ El diseño propuesto es viable según el estudio de factibilidad (FD01) y respon
 ### 8. Recomendaciones
 Priorizar integración con GitHub API (FD02, 4.3)
 
-Capacitar docentes en interpretación de dashboards
 
 ### 9. Bibliografía
 Documentos académicos UPT (FD02, 1.4)
