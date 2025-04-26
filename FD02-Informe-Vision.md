@@ -34,6 +34,7 @@ Integrantes:
 | :-: | :- | :- | :- | :- | :- |
 |Versión|Hecha por|Revisada por|Aprobada por|Fecha|Motivo|
 |1\.0|AHC,PPC|PCQ|ARV|18/03/2025|Versión Original|
+|2\.0|AHC,PPC|PCQ|ARV|18/03/2025|Cambios en algunos de puntos de desarrollo|
 
 
 
@@ -198,64 +199,92 @@ e) Estandaraes de calidad y seguridad	](#_toc394513800)42
     - Mejorar la formación tecnológica de los estudiantes.
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
-4. <span id="_Toc52661349" class="anchor"></span>**Estudio de
-    Factibilidad**
+4. <span id="_Toc52661349" class="anchor"></span>**Vista General del Producto**
 
-    4.1	Perspectiva del producto
+    4.1 **Perspectiva del producto**  
+    El sistema propuesto es una plataforma de análisis de datos que recopilará, procesará y visualizará información sobre el uso de herramientas tecnológicas en proyectos académicos de estudiantes de Ingeniería de Sistemas de la UPT. Se integrará con los repositorios existentes de la universidad para automatizar la recolección de datos y generará reportes interactivos para apoyar la toma de decisiones académicas.
 
-    4.2	Resumen de capacidades
+    4.2 **Resumen de capacidades**  
+    - Recolección automatizada: Conexión con repositorios estudiantiles (GitHub, GitLab) para extraer datos de proyectos  
+    - Análisis comparativo: Identificación de tendencias en el uso de tecnologías por cohorte académica  
+    - Visualización de datos: Dashboards en Power BI con métricas clave (lenguajes más usados, frameworks populares)  
+    - Recomendaciones: Sugerencias personalizadas para estudiantes basadas en su perfil tecnológico  
 
-    4.3	Suposiciones y dependencias
+    4.3 **Suposiciones y dependencias**  
+    - *Suposiciones:*  
+      - El 90% de los proyectos académicos utilizan control de versiones (Git)  
+      - Los datos recopilados son representativos de toda la población estudiantil  
+    - *Dependencias:*  
+      - Acceso a la API de GitHub para extraer datos de repositorios  
+      - Servidores UPT para almacenar la base de datos del proyecto  
 
-    4.4	Costos y precios
+    4.4 **Costos y precios**  
+    | Descripción | Costo (S/) | Justificación |  
+    |------------|------------|---------------|  
+    | Desarrollo de software | 5,600 | Incluye 120h analista (S/3,600) + 80h desarrollador (S/2,000) |  
+    | Infraestructura cloud | 200 | Servidor opcional para pruebas (AWS EC2) |  
+    | **Total** | **5,800** | Según estudio de factibilidad |  
 
-    4.5	Licenciamiento e instalación
-
-<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
-
-5. <span id="_Toc52661350" class="anchor"></span>**Características del producto**
-- Análisis de la distribución del uso de lenguajes de programación.
-- Evaluación de la popularidad de frameworks.
-- Examen de las librerías más utilizadas.
-- Identificación de bases de datos más empleadas.
-- Investigación de herramientas CI/CD en el ámbito académico.
-
-<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
-
-6. <span id="_Toc52661351" class="anchor"></span>**Restricciones**
-El análisis está limitado a estudiantes de la Escuela de Ingeniería de Sistemas de la UPT.
-<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
-
-7. <span id="_Toc52661352" class="anchor"></span>**Rangos de Calidad**
-- Precisión en la recopilación de datos.
-- Análisis detallado y validado estadísticamente.
-- Presentación clara y concisa de los resultados.
-<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
-
-8. <span id="_Toc52661353" class="anchor"></span>**Precedencia y Prioridad**
-- Priorizar la evaluación de las herramientas más utilizadas.
-- Enfocar el análisis en las tecnologías con mayor impacto académico.
-<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
-
-9. <span id="_Toc52661354" class="anchor"></span>**Otros requerimientos del producto**
-- Seguridad en el manejo de los datos recopilados.
-- Accesibilidad del informe final para los interesados.
-<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
-
-<span id="_Toc52661355" class="anchor"></span>**CONCLUSIONES**<br>
-El análisis permitirá comprender cómo los estudiantes de la UPT utilizan las herramientas tecnológicas, qué impacto tienen en su rendimiento académico y cuáles son las tecnologías más relevantes en el entorno académico.
-<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
-
-<span id="_Toc52661356" class="anchor"></span>**RECOMENDACIONES**
-- Fortalecer la formación en herramientas tecnológicas más utilizadas.
-- Implementar programas de capacitación continua.
-- Realizar análisis periódicos para evaluar cambios en el uso de tecnologías.
-<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
-
-<span id="_Toc52661357" class="anchor"></span>**BIBLIOGRAFIA**
+    4.5 **Licenciamiento e instalación**  
+    - *Licencias:*  
+      - Software de análisis: Herramientas open-source (Python, Pandas, Jupyter Notebook)  
+      - Visualización: Power BI Desktop (gratuito) o Tableau Public  
+    - *Instalación:* Implementación en laboratorios UPT con soporte del Departamento de TI  
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
-<span id="_Toc52661358" class="anchor"></span>**WEBGRAFIA**
+5. <span id="_Toc52661350" class="anchor"></span>**Características del producto**  
+- Análisis de la distribución del uso de lenguajes de programación  
+- Evaluación de la popularidad de frameworks  
+- Examen de las librerías más utilizadas  
+- Identificación de bases de datos más empleadas  
+- Investigación de herramientas CI/CD en el ámbito académico  
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
+
+6. <span id="_Toc52661351" class="anchor"></span>**Restricciones**  
+- *Temporales:* El proyecto debe completarse en 5 meses (pág. 4 del informe de factibilidad)  
+- *Tecnológicas:* Compatibilidad limitada con repositorios públicos (no se analizarán proyectos privados sin autorización)  
+- *Legales:* Cumplimiento estricto de la Ley Nº 29733 (protección de datos personales)  
+
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
+
+7. <span id="_Toc52661352" class="anchor"></span>**Rangos de Calidad**  
+- Precisión en la recopilación de datos (≥95% de exactitud)  
+- Análisis detallado y validado estadísticamente  
+- Presentación clara y concisa de los resultados  
+
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
+
+8. <span id="_Toc52661353" class="anchor"></span>**Precedencia y Prioridad**  
+- *Crítica:* Análisis de lenguajes (uso en 100% de proyectos)  
+- *Alta:* Integración CI/CD (demanda laboral creciente)  
+- *Media:* Bases de datos NoSQL (30% de adopción actual)  
+
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
+
+9. <span id="_Toc52661354" class="anchor"></span>**Otros requerimientos del producto**  
+- **Estándares legales:**  
+  - Cumplimiento de Ley Nº 29733 (protección de datos)  
+  - Propiedad intelectual de resultados para UPT  
+- **Estándares de comunicación:**  
+  - Reportes en PDF/CSV semestrales  
+- **Cumplimiento de plataforma:**  
+  - Compatibilidad con navegadores modernos (Chrome, Edge, Firefox v100+)  
+- **Calidad y seguridad:**  
+  - Encriptación AES-256 y backups diarios  
+
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
+
+<span id="_Toc52661355" class="anchor"></span>**CONCLUSIONES**  
+El análisis permitirá comprender cómo los estudiantes de la UPT utilizan las herramientas tecnológicas, qué impacto tienen en su rendimiento académico y cuáles son las tecnologías más relevantes en el entorno académico.  
+
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
+
+<span id="_Toc52661356" class="anchor"></span>**RECOMENDACIONES**  
+- Fortalecer la formación en herramientas tecnológicas más utilizadas  
+- Implementar programas de capacitación continua  
+- Realizar análisis periódicos para evaluar cambios en el uso de tecnologías  
+
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
+
