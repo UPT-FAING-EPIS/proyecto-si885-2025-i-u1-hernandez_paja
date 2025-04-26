@@ -130,7 +130,29 @@ Los Atributos de Calidad (QAs) son propiedades medibles y evaluables de un siste
 ## 3. REPRESENTACIÓN DE LA ARQUITECTURA DEL SISTEMA
 
 ### 3.1. Vista de Caso de uso
-Esta sección describe los casos de uso del sistema "Análisis de Herramientas Tecnológicas", abarcando todas sus funcionalidades principales y los actores que interactúan con él. Se incluyen los escenarios arquitectónicamente significativos que requieren especial atención en el diseño.
+
+```mermaid
+flowchart TD
+    subgraph Sistema
+        UC1[Consultar estadísticas]
+        UC2[Exportar reportes]
+        UC3[Configurar sistema]
+        UC4[Autenticarse]
+        UC5[Analizar repositorios]
+    end
+
+    Estudiante --> UC1
+    Administrador --> UC2
+    Administrador --> UC3
+    Sistema --> UC5
+    UC1 -.-> UC4
+    UC2 -.-> UC4
+    UC3 -.-> UC4
+
+    style Sistema fill:#f9f9f9,stroke:#333
+    linkStyle 0,1,2 stroke:#0074D9,stroke-width:2px
+    linkStyle 3,4,5 stroke:#FF851B,stroke-width:2px
+```
 
 #### 3.1.1. Diagramas de Casos de uso
 La estructura del sistema se ilustra mediante un conjunto de casos de uso que generan una vista completa de las interacciones. Estos escenarios describen secuencias de operaciones entre objetos y procesos, sirviendo para validar el diseño arquitectónico. Los casos de uso principales incluyen: registro de herramientas, generación de reportes y gestión de usuarios.
@@ -139,44 +161,180 @@ La estructura del sistema se ilustra mediante un conjunto de casos de uso que ge
 Esta vista representa los requerimientos funcionales del sistema, describiendo los componentes significativos del modelo de diseño como subsistemas, paquetes y clases.
 
 #### 3.2.1. Diagrama de Subsistemas (paquetes)
-El sistema se compone de cuatro subsistemas principales: Autenticación, Gestión de Herramientas, Análisis y Reportes. Cada subsistema agrupa funcionalidades relacionadas y se comunica con los demás a través de interfaces definidas.
+```mermaid
+flowchart TD
+    subgraph "Sistema de Análisis"
+        A[Extracción de Datos]
+        B[Procesamiento]
+        C[Visualización]
+        D[Administración]
+        E[Autenticación]
+    end
+    
+    A --> B
+    B --> C
+    D --> A
+    D --> B
+    D --> C
+    E --> D
+    
+    style A fill:#e1f5fe,stroke:#039be5
+    style B fill:#e8f5e9,stroke:#43a047
+    style C fill:#fff3e0,stroke:#fb8c00
+    style D fill:#f3e5f5,stroke:#8e24aa
+    style E fill:#ffebee,stroke:#f44336
+```
 
 #### 3.2.2. Diagrama de Secuencia (vista de diseño)
-Muestra las interacciones temporales entre objetos durante la ejecución de casos de uso específicos, como el proceso de registro de una nueva herramienta tecnológica.
+```mermaid
+sequenceDiagram
+    participant Usuario
+    participant Frontend
+    participant Backend
+    participant GitHubAPI
+    participant BD
+    
+    Usuario->>Frontend: Solicitar análisis
+    Frontend->>Backend: POST /analizar
+    Backend->>GitHubAPI: GET /repos
+    GitHubAPI-->>Backend: JSON metadata
+    Backend->>BD: INSERT datos_proyecto
+    BD-->>Backend: Confirmación
+    Backend->>Frontend: Resultados análisis
+    Frontend->>Usuario: Mostrar dashboard
+```
 
 #### 3.2.3. Diagrama de Colaboración (vista de diseño)
-Describe cómo los objetos colaboran para realizar las funcionalidades del sistema, enfatizando las relaciones estructurales entre ellos.
+```mermaid
+flowchart LR
+    subgraph "Proceso de Análisis"
+        GitHubAPI[[GitHub API]] -->|Proveer datos| Extracción
+        Extracción -->|Datos crudos| Procesamiento
+        Procesamiento -->|Datos estructurados| Almacenamiento
+        Almacenamiento -->|Métricas| Visualización
+    end
+    
+    Administración -->|Configurar parámetros| Extracción
+    Administración -->|Definir reglas| Procesamiento
+    Visualización -->|Mostrar| Interfaz[/"Interfaz Web\n(Power BI)"/]
+```
 
 #### 3.2.4. Diagrama de Objetos
-Presenta instancias concretas de las clases en un momento específico de ejecución, mostrando el estado actual del sistema con datos reales.
+```mermaid
+flowchart TD
+    OBJ1[/"Repositorio UPT-2025-01\n(Lenguajes: Python, JavaScript\nFrameworks: Django, React)"/]
+    OBJ2[/"Encargado de la organizacion\n(Cohorte: 2021-1\nProyectos: 5)"/]
+    OBJ3[/"Reporte Tecnologías 2025\n(Top Lenguajes: Python(65%), JS(30%)\nFrameworks: React(45%), Django(40%))"/]
+    
+    OBJ1 -->|Pertenece a| OBJ2
+    OBJ1 -->|Incluido en| OBJ3
+```
 
 #### 3.2.5. Diagrama de Clases
-Modelo estático que muestra las clases principales del sistema (Usuario, Herramienta, Análisis, Reporte) con sus atributos, operaciones y relaciones.
+```mermaid
+classDiagram
+    class Proyecto {
+        +String nombre
+        +Date fecha
+        +List~String~ tecnologias
+        +String cohorte
+        +analizarTecnologias()
+    }
+    
+    class Estudiante {
+        +String codigo
+        +String nombre
+        +List~Proyecto~ proyectos
+        +generarReporte()
+    }
+    
+    class Reporte {
+        +String tipo
+        +Date fechaGeneracion
+        +generarPDF()
+        +exportarCSV()
+    }
+    
+    class Dashboard {
+        +Map~String, int~ estadisticas
+        +actualizarVista()
+        +filtrarPorCohorte()
+    }
+    
+    Estudiante "1" --> "n" Proyecto
+    Proyecto "1" --> "1" Reporte
+    Dashboard --> Reporte
+```
 
 #### 3.2.6. Diagrama de Base de datos (relacional)
-Esquema de la base de datos relacional que incluye las tablas principales (usuarios, herramientas, análisis) con sus campos, tipos de datos y relaciones.
+```mermaid
+
+```
 
 ### 3.3. Vista de Implementación
-Describe cómo se implementará físicamente el sistema, incluyendo la estructura de componentes y paquetes.
+```mermaid
+
+```
 
 #### 3.3.1. Diagrama de arquitectura software (paquetes)
-Arquitectura en tres capas: Presentación (interfaz web), Lógica de Negocio (servicios) y Acceso a Datos (persistencia).
+```mermaid
+
+```
 
 #### 3.3.2. Diagrama de arquitectura del sistema (Diagrama de componentes)
-Componentes principales: Cliente Web, API REST, Servicio de Autenticación y Base de Datos, mostrando sus interconexiones.
+```mermaid
+flowchart TD
+    Cliente[Cliente Web] --> API[API REST]
+    API --> ServAuth[Servicio Autenticación]
+    API --> ServAnalisis[Servicio Análisis]
+    ServAnalisis --> GitHub[GitHub API]
+    ServAnalisis --> BD[(Base de Datos)]
+    API --> PowerBI[Power BI Embedded]
+```
 
 ### 3.4. Vista de procesos
 Describe los procesos pesados del sistema y su interacción.
 
 #### 3.4.1. Diagrama de Procesos del sistema (diagrama de actividad)
-Flujo completo del proceso de análisis de herramientas, desde la recolección de datos hasta la generación de reportes.
-
+```mermaid
+flowchart TD
+    A[Inicio] --> B[Autenticar en GitHub API]
+    B --> C{Token válido?}
+    C -->|Sí| D[Extraer metadatos repositorios]
+    C -->|No| Z[Fin]
+    D --> E[Clasificar tecnologías]
+    E --> F[Almacenar en BD]
+    F --> G[Generar estadísticas]
+    G --> H[Actualizar dashboard]
+    H --> I{Usuario solicita reporte?}
+    I -->|Sí| J[Generar PDF/CSV]
+    I -->|No| K[Fin]
+    J --> K
+```
 ### 3.5. Vista de Despliegue
 Describe la distribución física del sistema en los entornos de producción.
 
 #### 3.5.1. Diagrama de despliegue
-Configuración física con servidores web, de aplicación y de base de datos, mostrando su conectividad y distribución geográfica.
-
+```mermaid
+flowchart TD
+    subgraph "Cloud UPT"
+        ServWeb[Servidor Web\nNginx]
+        ServApp[Servidor Aplicación\nPython/Django]
+        ServDB[Servidor BD\nPostgreSQL]
+    end
+    
+    subgraph "Internet"
+        GitHub[[GitHub Cloud]]
+    end
+    
+    Usuarios --> ServWeb
+    ServWeb --> ServApp
+    ServApp --> ServDB
+    ServApp --> GitHub
+    
+    style Cloud fill:#e3f2fd,stroke:#2196f3
+    style Internet fill:#e8f5e9,stroke:#4caf50
+```
 ## 4. ATRIBUTOS DE CALIDAD DEL SOFTWARE
 
 Los Atributos de Calidad (QAs) son propiedades medibles y evaluables del sistema que determinan cómo satisface las necesidades de los stakeholders. Estos requerimientos no funcionales son críticos para el éxito de la solución.
