@@ -206,7 +206,7 @@ RN004: Validación cruzada con 3 fuentes de datos
 RN005: Retención de datos por 2 años académicos
 ```mermaid
 flowchart LR
-    A[Repositorio] --> B{Cumple licencia?}
+    A[Repositorio] --> B{Cumple Informacion?}
     B -->|Sí| C[Procesar]
     B -->|No| D[Descartar]
 ```
