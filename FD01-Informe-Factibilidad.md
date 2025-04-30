@@ -148,10 +148,10 @@ Se estiman los siguientes costos:
 ### Costos de personal
 | Rol               | Horas estimadas | Tarifa (S/ hora) | Costo Total (S/) |
 |-------------------|----------------|------------------|------------------|
-| Analista de datos | 120            | 30               | 3,600            |
-| Desarrollador     | 80             | 25               | 2,000            |
-| Investigador      | 100            | 20               | 2,000            |
-| **Total**         | **300**        |                  | **7,600**        |
+| Analista de datos | 100            | 20               | 2,000            |
+| Desarrollador     | 80             | 10               | 800            |
+| Investigador      | 100            | 15               | 1,500            |
+| **Total**         | **280**        |                  | **4,300**        |
 
 ### Costos totales del desarrollo del sistema
 | Descripción            | Costo Estimado (S/) |
@@ -159,8 +159,28 @@ Se estiman los siguientes costos:
 | Costos generales       | 350                 |
 | Costos operativos      | 300                 |
 | Costos del ambiente    | 300                 |
-| Costos de personal     | 7,600               |
-| **Total**              | **8,550**           |
+| Costos de personal     | 4,300               |
+| **Total**              | **5,250**           |
+
+
+## Fuentes de Financiamiento (Ingresos)
+
+| Fuente de Ingresos      | Monto (S/) |
+|-------------------------|------------|
+| Aporte Universidad      | 6,000      |
+| **Total Ingresos**      | **6,000**  |
+
+
+# **Flujo de Caja Neto**
+
+| Mes       | Ingresos | Egresos  | Flujo Neto | Acumulado |
+|-----------|----------|----------|------------|-----------|
+| **Mes 1** | 1,500    | 1,200    | 300        | 300       |
+| **Mes 2** | 1,500    | 1,050    | 450        | 750       |
+| **Mes 3** | 1,500    | 1,050    | 450        | 1,200     |
+| **Mes 4** | 1,500    | 1,050    | 450        | 1,650     |
+| **Mes 5** | -        | 900      | (900)      | **750**   |
+| **Total** | **6,000**| **5,250**| **750**    |           |
 
 ## **4.3 Factibilidad Operativa**
 El proyecto es operativamente viable porque:
@@ -203,13 +223,13 @@ El proyecto no genera impacto ambiental negativo, ya que:
 
 #### 5.1.2 Criterios de Inversión
 ##### 5.1.2.1 Relación Beneficio/Costo (B/C)
-B/C = 15,000 / 8,200 = 1.83
+B/C =  1.14 
 Interpretación: B/C > 1 (Proyecto rentable)
 ##### 5.1.2.2 Valor Actual Neto (VAN)
-VAN = S/ 4,191
+VAN = S/620
 Interpretación: VAN > 0 (Genera valor económico)
 ##### 5.1.2.3 Tasa Interna de Retorno (TIR)
-TIR = 22% (Mayor que el COK del 10%)
+TIR = 18% (Mayor que el COK del 10%)
 Interpretación: Proyecto rentable
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
