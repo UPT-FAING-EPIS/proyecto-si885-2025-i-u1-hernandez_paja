@@ -288,23 +288,7 @@ flowchart TD
 4. Permite exportar a PDF/CSV  
 
 ### 6.3 Modelo Lógico
-### 6.3.1 Análisis de Objetos
-```mermaid
-mindmap
-  root((Objetos del Sistema))
-    Proyecto
-      Nombre
-      Tecnologías
-      Fecha
-    Estudiante
-      Código
-      Cohorte
-      Repositorios
-    Reporte
-      Tipo
-      Parámetros
-      Resultados
-```
+
 ### 6.3.2 Diagrama de Actividades con Objetos
 ```mermaid
 flowchart TD

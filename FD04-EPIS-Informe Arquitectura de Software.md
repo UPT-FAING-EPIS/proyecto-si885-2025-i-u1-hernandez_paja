@@ -77,7 +77,7 @@ Paja de la Cruz, Piero Alexander (2020067576)
 
 ## 1. INTRODUCCIÓN  
 
-### 1.1. Propósito (Diagrama 4+1)  
+### 1.1. Propósito  
 Se presenta una visión global y resumida de la arquitectura del sistema y de los objetivos generales del diseño. Se describen las influencias con los requisitos funcionales y no funcionales del sistema y las decisiones y prioridades establecidas – eficiencia vs. Portabilidad, por ejemplo.
 
 ### 1.2. Alcance  
@@ -233,59 +233,135 @@ flowchart TD
 #### 3.2.5. Diagrama de Clases
 ```mermaid
 classDiagram
-    class Proyecto {
-        +String nombre
-        +Date fecha
-        +List~String~ tecnologias
-        +String cohorte
-        +analizarTecnologias()
+    direction TB
+
+    %% Columna izquierda
+    class Lenguaje {
+        +String language
+        +Long bytes
+        +Double percentage
     }
-    
-    class Estudiante {
-        +String codigo
-        +String nombre
-        +List~Proyecto~ proyectos
-        +generarReporte()
+
+    class Framework {
+        +String framework
+        +Integer count
     }
-    
-    class Reporte {
-        +String tipo
-        +Date fechaGeneracion
-        +generarPDF()
-        +exportarCSV()
+
+    class Libreria {
+        +String library
+        +Integer count
     }
-    
-    class Dashboard {
-        +Map~String, int~ estadisticas
-        +actualizarVista()
-        +filtrarPorCohorte()
+
+    %% Columna derecha    
+    class BaseDatos {
+        +String database
+        +Integer count
     }
-    
-    Estudiante "1" --> "n" Proyecto
-    Proyecto "1" --> "1" Reporte
-    Dashboard --> Reporte
+
+    class HerramientaCI_CD {
+        +String tool
+        +Integer count
+    }
+
+    class Actividad {
+        +String year_month
+        +Integer count
+    }
 ```
 
 #### 3.2.6. Diagrama de Base de datos (relacional)
 ```mermaid
-
+erDiagram
+    USUARIO ||--o{ PROYECTO : "tiene"
+    USUARIO {
+        int id PK
+        varchar codigo
+        varchar nombre
+        varchar email
+        varchar password_hash
+        varchar rol
+    }
+    
+    PROYECTO ||--|{ TECNOLOGIA : "utiliza"
+    PROYECTO {
+        int id PK
+        varchar nombre
+        date fecha_creacion
+        varchar repositorio_url
+        int usuario_id FK
+        varchar cohorte
+    }
+    
+    TECNOLOGIA {
+        int id PK
+        varchar nombre
+        varchar tipo
+        int proyecto_id FK
+    }
+    
+    REPORTE ||--o{ PROYECTO : "incluye"
+    REPORTE {
+        int id PK
+        varchar nombre
+        date fecha_generacion
+        varchar formato
+        int usuario_id FK
+    }
+    
+    ANALISIS {
+        int id PK
+        timestamp fecha
+        json metricas
+        int proyecto_id FK
+    }
 ```
 
 ### 3.3. Vista de Implementación
 ```mermaid
+flowchart TD
+    subgraph "Cliente"
+        A[Navegador Web] --> B[HTML/CSS]
+        B --> C[JavaScript Básico]
+        C --> D[Chart.js]
+    end
 
+    subgraph "Servidor"
+        E[Apache] --> F[PHP]
+        F --> G[MySQL]
+    end
+
+    subgraph "Externo"
+        H[GitHub API]
+    end
+
+    A -->|HTTP| E
+    F -->|SQL| G
+    F -->|API REST| H
+    D -->|AJAX| F
 ```
 
 #### 3.3.1. Diagrama de arquitectura software (paquetes)
 ```mermaid
+flowchart TD
+    subgraph "Frontend"
+        A[Páginas HTML] --> B[Formularios]
+        B --> C[Gráficos Chart.js]
+    end
 
+    subgraph "Backend"
+        D[PHP] --> E[MySQL]
+        D --> F[GitHub API]
+    end
+
+    A -->|Envía datos| D
+    D -->|Devuelve JSON| C
+    C -->|Muestra| A
 ```
 
 #### 3.3.2. Diagrama de arquitectura del sistema (Diagrama de componentes)
 ```mermaid
 flowchart TD
     Cliente[Cliente Web] --> API[API REST]
-    API --> ServAuth[Servicio Autenticación]
     API --> ServAnalisis[Servicio Análisis]
     ServAnalisis --> GitHub[GitHub API]
     ServAnalisis --> BD[(Base de Datos)]
@@ -305,11 +381,7 @@ flowchart TD
     D --> E[Clasificar tecnologías]
     E --> F[Almacenar en BD]
     F --> G[Generar estadísticas]
-    G --> H[Actualizar dashboard]
-    H --> I{Usuario solicita reporte?}
-    I -->|Sí| J[Generar PDF/CSV]
-    I -->|No| K[Fin]
-    J --> K
+    G --> K[Fin]
 ```
 ### 3.5. Vista de Despliegue
 Describe la distribución física del sistema en los entornos de producción.
@@ -317,23 +389,9 @@ Describe la distribución física del sistema en los entornos de producción.
 #### 3.5.1. Diagrama de despliegue
 ```mermaid
 flowchart TD
-    subgraph "Cloud UPT"
-        ServWeb[Servidor Web\nNginx]
-        ServApp[Servidor Aplicación\nPython/Django]
-        ServDB[Servidor BD\nPostgreSQL]
-    end
-    
-    subgraph "Internet"
-        GitHub[[GitHub Cloud]]
-    end
-    
-    Usuarios --> ServWeb
-    ServWeb --> ServApp
-    ServApp --> ServDB
-    ServApp --> GitHub
-    
-    style Cloud fill:#e3f2fd,stroke:#2196f3
-    style Internet fill:#e8f5e9,stroke:#4caf50
+    S[🖥️ Servidor] --> BD[(🛢️ MySQL)]
+    S --> GH[🐙 GitHub API]
+    C[💻 Dispositivos] --> S
 ```
 ## 4. ATRIBUTOS DE CALIDAD DEL SOFTWARE
 
